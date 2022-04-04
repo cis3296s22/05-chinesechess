@@ -21,12 +21,15 @@ tar -xzf
 # How to contribute
 Follow this project board to know the latest status of the project: [http://...]([http://...])  
 
+The UI of the project: ![image](https://user-images.githubusercontent.com/70277494/161112318-d1b01255-6382-4964-a924-7953a155b140.png)
+
+Scrum 1 Feature List: ![image](https://user-images.githubusercontent.com/70277494/161112410-927e9363-9802-449f-9823-38acb26608e5.png)
+
+
 ### How to build
 - Use this github repository: ... 
-- Specify what branch to use for a more stable release or for cutting edge development.  
-- Use InteliJ 11
-- Specify additional library to download if needed 
-- What file and target to compile and run. 
-- What is expected to happen when the app start. 
+- Download file repo as zip. Export files where there is space.
+- Open project in eclipse. Import files from the downloaded repo.
+- Compile and Run
 
 - Trello Board: https://trello.com/b/Y4kxsGtW/chinese-chess
