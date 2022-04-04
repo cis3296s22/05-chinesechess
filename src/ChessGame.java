@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ChessGame {
+
     public static void main(String[] args) {
         JFrame f = new JFrame("Chinese Chess Game");//title
 
@@ -26,6 +27,15 @@ public class ChessGame {
         JButton newStartGame = new JButton("New Game");
         JButton ExitGame = new JButton("Exit");
 
+        ExitGame.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int j=JOptionPane.showConfirmDialog(null,"Are you sure? ","Exit",JOptionPane.YES_OPTION,JOptionPane.QUESTION_MESSAGE);
+                if(j==JOptionPane.YES_OPTION){
+                    System.exit(0);
+                }
+            }
+        });
 
 
         //add buttons
