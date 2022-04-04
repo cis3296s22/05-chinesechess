@@ -31,6 +31,13 @@ public class ChessGame {
         //add buttons
         f.add(newStartGame);
         f.add(ExitGame);
+        
+        //new game
+        newStartGame.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+            }
+        });
 
         f.setVisible(true);
     }
