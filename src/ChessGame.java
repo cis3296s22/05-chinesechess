@@ -37,7 +37,6 @@ public class ChessGame {
             }
         });
 
-
         //add buttons
         f.add(newStartGame);
         f.add(ExitGame);
@@ -48,7 +47,6 @@ public class ChessGame {
             public void actionPerformed(ActionEvent e){
             }
         });
-
         f.setVisible(true);
     }
 }
