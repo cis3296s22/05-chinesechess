@@ -9,9 +9,9 @@ Online Chinese Chess is a board game for 2 players using two computers with the 
 # How to contribute
 Follow this project board to know the latest status of the project: [http://...]([http://...])  
 
-The UI of the project: ![image](https://user-images.githubusercontent.com/70277494/161112318-d1b01255-6382-4964-a924-7953a155b140.png)
+The UI of the project: ![img](https://user-images.githubusercontent.com/70277494/161112318-d1b01255-6382-4964-a924-7953a155b140.png)
 
-Scrum 1 Feature List: ![image](https://user-images.githubusercontent.com/70277494/161112410-927e9363-9802-449f-9823-38acb26608e5.png)
+Scrum 1 Feature List: ![img](https://user-images.githubusercontent.com/70277494/161112410-927e9363-9802-449f-9823-38acb26608e5.png)
 
 
 ### How to build
