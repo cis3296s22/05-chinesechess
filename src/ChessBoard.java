@@ -10,9 +10,10 @@ import java.io.IOException;
 public class ChessBoard extends JPanel{
 
     Pieces pic = new Pieces();
+    static JFrame jf = new JFrame();
 
     public void initUI() throws IOException {
-        JFrame jf = new JFrame();
+
         jf.setSize(1240,860);
         jf.setTitle("中国象棋/Chinese Chess");
         jf.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//Close the windows and kill the application
@@ -20,7 +21,7 @@ public class ChessBoard extends JPanel{
         jf.setLocationRelativeTo(null);//windows
         jf.setResizable(false);//cannot resize
 
-        this.setBackground(Color.white);
+        this.setBackground(Color.gray);
         jf.add(this);
         jf.setVisible(true);
 
@@ -29,40 +30,40 @@ public class ChessBoard extends JPanel{
         pic.setG(g);
         pic.setChessBoard(this);
 
-//        add new panel on the right and set the size
+//       add new panel on the right and set the size
         JPanel jp = new JPanel();
         jp.setPreferredSize(new Dimension(450,1));
-        jp.setBackground(Color.cyan);
+        jp.setBackground(Color.gray);
         jp.setLayout(null);
         jf.add(jp, BorderLayout.EAST);
 
-
         //add logo
-        //            JLabel logo = new JLabel("Chinese Chess"){
-//                BufferedImage lg = ImageIO.read(new File("img/logo.png"));
-//
-//                public void paint(Graphics g){
-//                    g.drawImage(lg, 60,40,150,150,null);
-//                }
-//            };
-//            logo.setBounds(0,0,400,204);
-//            jp.add(logo);
+        JLabel logo = new JLabel("Chinese Chess");
+        logo.setFont(new Font("Serif", Font.PLAIN, 40));
+        logo.setBounds(100,10,250,100);
+        jp.add(logo);
 
-        //add startButton
-
-        JButton startButton = new JButton("Start"){
-            BufferedImage startPic = ImageIO.read(new File("img/start.jpg"));
-
-            public void paint(Graphics g){
-                g.drawImage(startPic, 60, 400, 150, 90, null);
-            }
-        };
-
-        startButton.setBounds(100, 450, 250,100);
+        //add buttons
+        JButton startButton = new JButton("Start");
+        startButton.setBounds(100, 150, 250,100);
+        startButton.setFont(new Font("Serif", Font.PLAIN, 40));
+        startButton.setBackground(Color.PINK);
         startButton.addActionListener(pic);
         jp.add(startButton);
 
+        JButton restartButton = new JButton("Restart");
+        restartButton.setBounds(100, 300, 250,100);
+        restartButton.setFont(new Font("Serif", Font.PLAIN, 40));
+        restartButton.setBackground(Color.PINK);
+        restartButton.addActionListener(pic);
+        jp.add(restartButton);
 
+        JButton exitButton = new JButton("Exit");
+        exitButton.setBounds(100, 450, 250,100);
+        exitButton.setFont(new Font("Serif", Font.PLAIN, 40));
+        exitButton.setBackground(Color.PINK);
+        exitButton.addActionListener(pic);
+        jp.add(exitButton);
     }
 
     public void paint(Graphics g){
