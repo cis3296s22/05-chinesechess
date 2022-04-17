@@ -64,6 +64,9 @@ public class ChessBoard extends JPanel{
         exitButton.setBackground(Color.PINK);
         exitButton.addActionListener(pic);
         jp.add(exitButton);
+
+        //BGM
+        Sounds.sound.getSound().playBGM(".\\sound\\BGM.wav");
     }
 
     public void paint(Graphics g){

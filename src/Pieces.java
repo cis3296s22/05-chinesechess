@@ -247,6 +247,7 @@ public class Pieces extends MouseAdapter implements ActionListener {
     }
 
     public void move(){
+        Sounds.sound.getSound().playSound(".\\sound\\move.wav");
         System.out.println(c +" "+ r + " " + beforePiece[2]);
         pieces[r][c] = beforePiece[2];
         pieces[beforePiece[0]][beforePiece[1]] = 0;
@@ -257,6 +258,7 @@ public class Pieces extends MouseAdapter implements ActionListener {
         r = -1;
         setChessflag();//switch users
         ui.repaint();
+
     }
 
     public boolean checkREDWinner(){
@@ -317,8 +319,11 @@ public class Pieces extends MouseAdapter implements ActionListener {
                         System.out.println("red->black");
                         move();
                         if( checkREDWinner() ){
+                            Sounds.sound.stopMusic();
+                            Sounds.sound.getSound().playSound(".\\sound\\win.wav");
                             System.out.println("Red Won!");
                             JOptionPane.showMessageDialog(ChessBoard.jf,"Red Won!");
+
                         }
                     }
                 } else if (beforePiece[2] < 10 & curPiece[2] > 10 & beforePiece[2] > 0 & chessflag == 2 & pieces[r][c] > 10 & canMove(beforePiece[2]) == 1) {
@@ -326,8 +331,11 @@ public class Pieces extends MouseAdapter implements ActionListener {
                         System.out.println("black->red");
                         move();
                         if( checkBLACKWinner() ){
+                            Sounds.sound.stopMusic();
+                            Sounds.sound.getSound().playSound(".\\sound\\win.wav");
                             System.out.println("Black Won!");
                             JOptionPane.showMessageDialog(ChessBoard.jf,"Black Won!");
+
                         }
                     }
                 }
