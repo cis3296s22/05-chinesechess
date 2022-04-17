@@ -42,11 +42,11 @@ public class Pieces extends MouseAdapter implements ActionListener {
 
         if(e.getActionCommand() == "Start"){
             System.out.println("Game start");
-            renew();
+            renew(); // redraws everything
             ui.repaint();
         }else if(e.getActionCommand() == "Restart"){
             System.out.println("Game restarts");
-            renew();
+            renew(); // redraws everything
             ui.repaint();
         }else if(e.getActionCommand() == "Exit"){
             ChessBoard.jf.dispose();

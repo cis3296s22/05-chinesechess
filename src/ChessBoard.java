@@ -30,7 +30,7 @@ public class ChessBoard extends JPanel{
         pic.setG(g);
         pic.setChessBoard(this);
 
-//       add new panel on the right and set the size
+        // add new panel on the right and set the size
         JPanel jp = new JPanel();
         jp.setPreferredSize(new Dimension(450,1));
         jp.setBackground(Color.gray);

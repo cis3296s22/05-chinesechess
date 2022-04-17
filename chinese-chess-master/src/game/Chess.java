@@ -129,7 +129,7 @@ public class Chess {
 		return image;
 		
 	}
-	public static void createChess(String name, int color, int x, int y) {    ///private§ïpublic
+	public static void createChess(String name, int color, int x, int y) {    ///privateï¿½ï¿½public
 		if(color == 1)//1:red, 2:black
 			pos[y][x] = 1;
 		else
@@ -164,11 +164,11 @@ public class Chess {
 		ChineseChessBoard.changeTurn();
 		}
 		else {
-			System.out.println("¤£¯à¦A®¬´Ñ¤F");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½Ñ¤F");
 		}
 	}
 	
-	public static int getPos(int x, int y) {   //­n¯à§ì¨ì¦ì¸m
+	public static int getPos(int x, int y) {   //ï¿½nï¿½ï¿½ï¿½ï¿½ï¿½m
 		
 		return pos[y][x];
 	}
