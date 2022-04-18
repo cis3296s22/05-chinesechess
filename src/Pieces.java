@@ -50,6 +50,7 @@ public class Pieces extends MouseAdapter implements ActionListener {
             ui.repaint();
         }else if(e.getActionCommand() == "Exit"){
             ChessBoard.jf.dispose();
+            Sounds.sound.getSound().stopMusic();
         }
     }
 
