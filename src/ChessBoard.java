@@ -11,6 +11,7 @@ public class ChessBoard extends JPanel{
 
     Pieces pic = new Pieces();
     static JFrame jf = new JFrame();
+    ImageIcon img = new ImageIcon(".\\img\\logo.png");
 
     public void initUI() throws IOException {
 
@@ -20,6 +21,7 @@ public class ChessBoard extends JPanel{
         jf.getContentPane().setBackground(Color.white);//background color white
         jf.setLocationRelativeTo(null);//windows
         jf.setResizable(false);//cannot resize
+        jf.setIconImage(img.getImage());//change icon
 
         this.setBackground(Color.gray);
         jf.add(this);
@@ -64,6 +66,9 @@ public class ChessBoard extends JPanel{
         exitButton.setBackground(Color.PINK);
         exitButton.addActionListener(pic);
         jp.add(exitButton);
+
+        //BGM
+        Sounds.sound.getSound().playBGM(".\\sound\\BGM.wav");
     }
 
     public void paint(Graphics g){

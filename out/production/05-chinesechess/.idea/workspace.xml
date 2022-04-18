@@ -1,65 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="af5c7620-9561-4a6d-80d6-d5be7d3419bc" name="Changes" comment="Delete main menu&#10;Add Chessboard Pieces moveable funtion(not correct)&#10;Click on the piece will make it looks bigger">
-      <change beforePath="$PROJECT_DIR$/out/production/05-chinesechess/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/05-chinesechess/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChessBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces.java" afterDir="false" />
+    <list default="true" id="67748092-2bd3-4adb-9a33-0aa87bfa6331" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
-  </component>
-  <component name="GithubProjectSettings">
-    <option name="branchProtectionPatterns">
-      <list>
-        <option value="master" />
-      </list>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="athena_workingBranch" />
+      </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="279qCFmBJ443TICF5QjE7hnZyy6" />
+  <component name="ProjectId" id="27vmkWAQ8k0SbkSiDKMvLUr2Xbp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/image" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\40392\Desktop\05-chinesechess\image" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\40392\Desktop\05-chinesechess\image" />
-    </key>
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="src" />
-    </key>
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "exceleditor.install": "false",
+    "last_opened_file_path": "C:/Users/Ellis/IdeaProjects/05-chinesechess"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.Main" />
       <module name="05-chinesechess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -67,40 +53,21 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="af5c7620-9561-4a6d-80d6-d5be7d3419bc" name="Changes" comment="" />
-      <created>1648742519656</created>
+      <changelist id="67748092-2bd3-4adb-9a33-0aa87bfa6331" name="Changes" comment="" />
+      <created>1650209076277</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1648742519656</updated>
+      <updated>1650209076277</updated>
     </task>
-    <task id="LOCAL-00001" summary="Add main menu&#10;Add start game button&#10;Add exit button">
-      <created>1649092263184</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1649092263184</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Delete main menu&#10;Add Chessboard Pieces moveable funtion(not correct)&#10;Click on the piece will make it looks bigger">
-      <created>1649958548762</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1649958548762</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Delete main menu&#10;Add Chessboard Pieces moveable funtion(not correct)&#10;Click on the piece will make it looks bigger">
-      <created>1649958563539</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1649958563539</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,10 +80,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add main menu&#10;Add start game button&#10;Add exit button" />
-    <MESSAGE value="Delete main menu&#10;Add Chessboard Pieces moveable funtion(not correct)&#10;Click on the piece will make it looks bigger" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete main menu&#10;Add Chessboard Pieces moveable funtion(not correct)&#10;Click on the piece will make it looks bigger" />
   </component>
 </project>
