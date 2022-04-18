@@ -58,8 +58,15 @@ public class ChessBoard extends JPanel{
         restartButton.addActionListener(pic);
         jp.add(restartButton);
 
+        JButton pvpButton = new JButton("PvP");
+        pvpButton.setBounds(100, 450, 250,100);
+        pvpButton.setFont(new Font("Serif", Font.PLAIN, 40));
+        pvpButton.setBackground(Color.PINK);
+        pvpButton.addActionListener(pic);
+        jp.add(pvpButton);
+
         JButton exitButton = new JButton("Exit");
-        exitButton.setBounds(100, 450, 250,100);
+        exitButton.setBounds(100, 600, 250,100);
         exitButton.setFont(new Font("Serif", Font.PLAIN, 40));
         exitButton.setBackground(Color.PINK);
         exitButton.addActionListener(pic);
@@ -93,12 +100,26 @@ public class ChessBoard extends JPanel{
                         int newexsize = 13;
                         BufferedImage drawPicece = ImageIO.read(new File("img/"+pic.pieces[pic.r][pic.c]+".png"));
                         g.drawImage(drawPicece, init.y0 + pic.c * init.size - (init.chesssize+newexsize) / 2,init.x00 + pic.r * init.size - (init.chesssize+newexsize) / 2,init.chesssize+newexsize, init.chesssize+newexsize, this);
+                        // TODO send message between players?
                     }
                 }
             }
 
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static class Player {
+        public String name;
+        public int side; // 1 is red, 2 is black
+        public int bottom_or_top; //1 is bottom side, 2 is top side
+
+        public Player(String n, int s, int b_o_t ){
+            // constructor
+            name = n;
+            side = s;
+            bottom_or_top = b_o_t;
         }
     }
 }

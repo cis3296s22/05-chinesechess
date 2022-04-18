@@ -6,13 +6,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Scanner;
 
 public class Pieces extends MouseAdapter implements ActionListener {
 
     Graphics g;
     ChessBoard ui;
 
+    Client client = new Client();
+
     int chessflag = 1;//1-> red 2->black
+    int turn = 1;
 
     int x1, y1, x2, y2;
     int c = -1, r = -1;
@@ -50,6 +54,18 @@ public class Pieces extends MouseAdapter implements ActionListener {
             ui.repaint();
         }else if(e.getActionCommand() == "Exit"){
             ChessBoard.jf.dispose();
+        }
+        // TODO add client message sop
+        else if(e.getActionCommand() == "PvP"){
+            Scanner temp = new Scanner(System.in);
+            System.out.println("Setting up pvp ...");
+            System.out.println("Enter server ip address: ");
+            // get sever ip
+            String ip = temp.nextLine();
+            client.createClient(ip);
+            String idComp = client.getIP();
+            if( ip.equals(idComp)) System.out.println("Server is set up. \nThis is the server. You play as red and move first :) ");
+            else System.out.println("Server is set up. \nThis is the client. You play as black and move second :) ");
         }
     }
 
@@ -90,7 +106,7 @@ public class Pieces extends MouseAdapter implements ActionListener {
         return stone;
     }
 
-    public int canMove(int movingPiece){
+    public int canMove(int movingPiece){ // returns 1 if can move, else 0
 
         int flag = 0;
 
@@ -248,6 +264,9 @@ public class Pieces extends MouseAdapter implements ActionListener {
 
     public void move(){
         System.out.println(c +" "+ r + " " + beforePiece[2]);
+
+        // TODO send client message, player( ChessFlag ) to not player ( ChessFlag )
+
         pieces[r][c] = beforePiece[2];
         pieces[beforePiece[0]][beforePiece[1]] = 0;
         curPiece = new int[3];
