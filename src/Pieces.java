@@ -54,6 +54,7 @@ public class Pieces extends MouseAdapter implements ActionListener {
     }
 
     public void renew(){
+        Sounds.sound.stopMusic();
         pieces = new int[][]{
                 //red
                 {1,2,3,4,5,4,3,2,1}, {0,0,0,0,0,0,0,0,0},{0,6,0,0,0,0,0,6,0}, {7,0,7,0,7,0,7,0,7},
@@ -68,6 +69,7 @@ public class Pieces extends MouseAdapter implements ActionListener {
         chessflag = 1;
         curPiece = new int[3];
         beforePiece = new int[3];
+        Sounds.sound.getSound().playSound(".\\sound\\BGM.wav");
     }
 
     //from start point to end point (车 炮 go straight)
@@ -247,6 +249,7 @@ public class Pieces extends MouseAdapter implements ActionListener {
     }
 
     public void move(){
+        Sounds.sound.getSound().playSound(".\\sound\\move.wav");
         System.out.println(c +" "+ r + " " + beforePiece[2]);
         pieces[r][c] = beforePiece[2];
         pieces[beforePiece[0]][beforePiece[1]] = 0;
@@ -257,12 +260,13 @@ public class Pieces extends MouseAdapter implements ActionListener {
         r = -1;
         setChessflag();//switch users
         ui.repaint();
+
     }
 
     public boolean checkREDWinner(){
         boolean flag = true;
 
-        for(int i = 0; i < 8; i++){
+        for(int i = 0; i < 10; i++){
             for(int j = 0; j < 9; j++){
                 if(pieces[i][j] == 5){
                     flag = false;
@@ -276,7 +280,7 @@ public class Pieces extends MouseAdapter implements ActionListener {
     public boolean checkBLACKWinner(){
         boolean flag = true;
 
-        for(int i = 0; i < 8; i++){
+        for(int i = 0; i < 10; i++){
             for(int j = 0; j < 9; j++){
                 if(pieces[i][j] == 55){
                     flag = false;
@@ -317,8 +321,11 @@ public class Pieces extends MouseAdapter implements ActionListener {
                         System.out.println("red->black");
                         move();
                         if( checkREDWinner() ){
+                            Sounds.sound.stopMusic();
+                            Sounds.sound.getSound().playSound(".\\sound\\win.wav");
                             System.out.println("Red Won!");
                             JOptionPane.showMessageDialog(ChessBoard.jf,"Red Won!");
+
                         }
                     }
                 } else if (beforePiece[2] < 10 & curPiece[2] > 10 & beforePiece[2] > 0 & chessflag == 2 & pieces[r][c] > 10 & canMove(beforePiece[2]) == 1) {
@@ -326,8 +333,11 @@ public class Pieces extends MouseAdapter implements ActionListener {
                         System.out.println("black->red");
                         move();
                         if( checkBLACKWinner() ){
+                            Sounds.sound.stopMusic();
+                            Sounds.sound.getSound().playSound(".\\sound\\win.wav");
                             System.out.println("Black Won!");
                             JOptionPane.showMessageDialog(ChessBoard.jf,"Black Won!");
+
                         }
                     }
                 }
