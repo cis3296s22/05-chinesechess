@@ -1,11 +1,18 @@
 package src;
 
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.util.Scanner;
 
 public class Pieces extends MouseAdapter implements ActionListener {
@@ -47,6 +54,7 @@ public class Pieces extends MouseAdapter implements ActionListener {
         if(e.getActionCommand() == "Start"){
             System.out.println("Game start");
             renew(); // redraws everything
+            playMusic();
             ui.repaint();
         }else if(e.getActionCommand() == "Restart"){
             System.out.println("Game restarts");
@@ -67,6 +75,24 @@ public class Pieces extends MouseAdapter implements ActionListener {
             if( ip.equals(idComp)) System.out.println("Server is set up. \nThis is the server. You play as red and move first :) ");
             else System.out.println("Server is set up. \nThis is the client. You play as black and move second :) ");
         }
+    }
+
+    private void playMusic() {
+        Clip clip = null;
+        try {
+            clip = AudioSystem.getClip();
+        } catch (LineUnavailableException e) {
+            System.out.println("sound machine broke :(");
+            System.exit(0);
+        }
+        try {
+            clip.open(AudioSystem.getAudioInputStream(new File("./sound/BGM.wav")));
+        } catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
+            System.out.println("sound machine broke :(");
+            System.exit(0);
+        }
+        clip.start();
+        clip.loop(Clip.LOOP_CONTINUOUSLY);
     }
 
     public void renew(){
