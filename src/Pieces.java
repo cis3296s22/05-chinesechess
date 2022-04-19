@@ -208,7 +208,7 @@ public class Pieces extends MouseAdapter implements ActionListener {
                     flag = 1;// right top
                 }
             }
-            if(beforePiece[0] < 10&beforePiece[1] < 8) {
+            if(beforePiece[0] < 4&beforePiece[1] < 8) {
                 if (beforePiece[0] - curPiece[0] == -2 && beforePiece[1] - curPiece[1] == -2
                         && pieces[beforePiece[0] + 1][beforePiece[1] + 1] == 0) {
                     flag = 1;// right bottom
@@ -240,7 +240,7 @@ public class Pieces extends MouseAdapter implements ActionListener {
                     flag = 1;// right bottom
                 }
             }
-        }//象 elephant
+        }//相 elephant
 
         return flag;
     }
