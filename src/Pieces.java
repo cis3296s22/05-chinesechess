@@ -189,26 +189,52 @@ public class Pieces extends MouseAdapter implements ActionListener {
                 }
             }
         }//马 horse
-        else if(movingPiece == 3 || movingPiece == 33){
+        else if(movingPiece == 3){
             if(beforePiece[0] > 0 && beforePiece[1] > 0) {
                 if (beforePiece[0] - curPiece[0] == 2 && beforePiece[1] - curPiece[1] == 2
                         && pieces[beforePiece[0] - 1][beforePiece[1] - 1] == 0) {
                     flag = 1;// left top
                 }
             }
-            if(beforePiece[0] < 9&beforePiece[1]  > 0) {
+            if(beforePiece[0] < 4&beforePiece[1]  > 0) {
                 if (beforePiece[0] - curPiece[0] == -2 && beforePiece[1] - curPiece[1] == 2
                         && pieces[beforePiece[0] + 1][beforePiece[1] - 1] == 0) {
                     flag = 1;// left bottom
                 }
             }
-            if(beforePiece[0] > 0&beforePiece[1] < 8) {
+            if(beforePiece[0] > 5&beforePiece[1] < 8) {
                 if (beforePiece[0] - curPiece[0] == 2 && beforePiece[1] - curPiece[1] == -2
                         && pieces[beforePiece[0] - 1][beforePiece[1] + 1] == 0) {
                     flag = 1;// right top
                 }
             }
-            if(beforePiece[0] < 9&beforePiece[1] < 8) {
+            if(beforePiece[0] < 10&beforePiece[1] < 8) {
+                if (beforePiece[0] - curPiece[0] == -2 && beforePiece[1] - curPiece[1] == -2
+                        && pieces[beforePiece[0] + 1][beforePiece[1] + 1] == 0) {
+                    flag = 1;// right bottom
+                }
+            }
+        }//象 elephant
+        else if(movingPiece == 33){
+            if(beforePiece[0] > 5 && beforePiece[1] > 0) {
+                if (beforePiece[0] - curPiece[0] == 2 && beforePiece[1] - curPiece[1] == 2
+                        && pieces[beforePiece[0] - 1][beforePiece[1] - 1] == 0) {
+                    flag = 1;// left top
+                }
+            }
+            if(beforePiece[0] < 10&beforePiece[1]  > 0) {
+                if (beforePiece[0] - curPiece[0] == -2 && beforePiece[1] - curPiece[1] == 2
+                        && pieces[beforePiece[0] + 1][beforePiece[1] - 1] == 0) {
+                    flag = 1;// left bottom
+                }
+            }
+            if(beforePiece[0] > 5&beforePiece[1] < 8) {
+                if (beforePiece[0] - curPiece[0] == 2 && beforePiece[1] - curPiece[1] == -2
+                        && pieces[beforePiece[0] - 1][beforePiece[1] + 1] == 0) {
+                    flag = 1;// right top
+                }
+            }
+            if(beforePiece[0] < 10&beforePiece[1] < 8) {
                 if (beforePiece[0] - curPiece[0] == -2 && beforePiece[1] - curPiece[1] == -2
                         && pieces[beforePiece[0] + 1][beforePiece[1] + 1] == 0) {
                     flag = 1;// right bottom

@@ -49,21 +49,21 @@ public class ChessBoard extends JPanel{
         JButton startButton = new JButton("Start");
         startButton.setBounds(100, 150, 250,100);
         startButton.setFont(new Font("Serif", Font.PLAIN, 40));
-        startButton.setBackground(Color.PINK);
+        startButton.setBackground(new Color(234,192,126));
         startButton.addActionListener(pic);
         jp.add(startButton);
 
         JButton restartButton = new JButton("Restart");
         restartButton.setBounds(100, 300, 250,100);
         restartButton.setFont(new Font("Serif", Font.PLAIN, 40));
-        restartButton.setBackground(Color.PINK);
+        restartButton.setBackground(new Color(234,192,126));
         restartButton.addActionListener(pic);
         jp.add(restartButton);
 
         JButton exitButton = new JButton("Exit");
         exitButton.setBounds(100, 450, 250,100);
         exitButton.setFont(new Font("Serif", Font.PLAIN, 40));
-        exitButton.setBackground(Color.PINK);
+        exitButton.setBackground(new Color(234,192,126));
         exitButton.addActionListener(pic);
         jp.add(exitButton);
 
