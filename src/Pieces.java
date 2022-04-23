@@ -351,7 +351,7 @@ public class Pieces extends MouseAdapter implements ActionListener {
                         move();
                         if( checkREDWinner() ){
                             Sounds.sound.stopMusic();
-                            Sounds.sound.getSound().playSound(".\\sound\\win2.wav");
+                            Sounds.sound.getSound().playSound(".\\sound\\win.wav");
                             System.out.println("Red Won!");
                             JOptionPane.showMessageDialog(ChessBoard.jf,"Red Won!");
 
