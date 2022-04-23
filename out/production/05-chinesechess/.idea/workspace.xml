@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af5c7620-9561-4a6d-80d6-d5be7d3419bc" name="Changes" comment="Update the elephant cannot go over the river again">
-      <change beforePath="$PROJECT_DIR$/out/production/05-chinesechess/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/05-chinesechess/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/05-chinesechess/src/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/05-chinesechess/src/ChessBoard.class" afterDir="false" />
+    <list default="true" id="af5c7620-9561-4a6d-80d6-d5be7d3419bc" name="Changes" comment="Add about button and mute button&#10;Mute function is not fully working, but it works once time&#10;Planning to add a showing step features">
+      <change afterPath="$PROJECT_DIR$/sound/win2.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/05-chinesechess/src/Pieces.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/05-chinesechess/src/Pieces.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChessBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pieces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sounds.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650344031123</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add about button and mute button&#10;Mute function is not fully working, but it works once time&#10;Planning to add a showing step features">
+      <created>1650736088488</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1650736088488</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +161,7 @@
     <MESSAGE value="test" />
     <MESSAGE value="Update the elephant cannot go over the river" />
     <MESSAGE value="Update the elephant cannot go over the river again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the elephant cannot go over the river again" />
+    <MESSAGE value="Add about button and mute button&#10;Mute function is not fully working, but it works once time&#10;Planning to add a showing step features" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add about button and mute button&#10;Mute function is not fully working, but it works once time&#10;Planning to add a showing step features" />
   </component>
 </project>
