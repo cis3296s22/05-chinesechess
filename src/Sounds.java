@@ -33,7 +33,6 @@ public class Sounds {
                 BGM.loop(-1);
             }
             BGM.stop();
-
         }catch (Exception e){
             e.printStackTrace();
         }

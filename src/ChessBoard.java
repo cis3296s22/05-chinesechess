@@ -35,7 +35,7 @@ public class ChessBoard extends JPanel{
 //       add new panel on the right and set the size
         JPanel jp = new JPanel();
         jp.setPreferredSize(new Dimension(450,1));
-        jp.setBackground(Color.gray);
+        jp.setBackground(Color.white);
         jp.setLayout(null);
         jf.add(jp, BorderLayout.EAST);
 
@@ -67,8 +67,28 @@ public class ChessBoard extends JPanel{
         exitButton.addActionListener(pic);
         jp.add(exitButton);
 
+//        JTextField textField = new JTextField("StepsBar");
+//        textField.setBackground(Color.white);
+//        textField.setBounds(100, 560, 250,200);
+//        textField.addActionListener(pic);
+//        jp.add(textField);
+
         //BGM
-        Sounds.sound.getSound().playBGM(".\\sound\\BGM.wav");
+        JButton muteBGM = new JButton("Mute");
+        muteBGM.setBounds(100,600,110,100);
+        muteBGM.setFont(new Font("Serif", Font.PLAIN, 30));
+        muteBGM.addActionListener(pic);
+        muteBGM.setBackground(new Color(234,192,126));
+        jp.add(muteBGM);
+
+        JButton aboutUs = new JButton("About");
+        aboutUs.setBounds(240,600,110,100);
+        aboutUs.setFont(new Font("Serif", Font.PLAIN, 30));
+        aboutUs.addActionListener(pic);
+        aboutUs.setBackground(new Color(234,192,126));
+        jp.add(aboutUs);
+
+        Sounds.sound.playBGM(".\\sound\\BGM.wav");
     }
 
     public void paint(Graphics g){
