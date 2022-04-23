@@ -13,7 +13,6 @@ public class Pieces extends MouseAdapter implements ActionListener {
     ChessBoard ui;
 
     int chessflag = 1;//1-> red 2->black
-    int soundflag = 1;
 
     int x1, y1, x2, y2;
     int c = -1, r = -1;
@@ -52,25 +51,8 @@ public class Pieces extends MouseAdapter implements ActionListener {
         }else if(e.getActionCommand() == "Exit"){
             ChessBoard.jf.dispose();
             Sounds.sound.getSound().stopMusic();
-        }
-        else if(e.getActionCommand() == "M"){
-            muteSound();
-            System.out.println("Music "+soundflag);
-            if(soundflag == 1){
-                Sounds.sound.playBGM(".\\sound\\BGM.wav");
-            }else if(soundflag == 0){
-                Sounds.sound.stopMusic();
-            }
         }else if(e.getActionCommand() == "About"){
             JOptionPane.showMessageDialog(ChessBoard.jf,"Chinese Chess Game\nCreate by Athena Evans, Yanfei Li, Jinhui Liu\n2022/4/23 Final version");
-        }
-    }
-
-    public void muteSound(){
-        if(soundflag == 1){
-            soundflag = 0;
-        }else if(soundflag == 0){
-            soundflag = 1;
         }
     }
 

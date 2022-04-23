@@ -3,6 +3,8 @@ package src;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -77,7 +79,13 @@ public class ChessBoard extends JPanel{
         JButton muteBGM = new JButton("Mute");
         muteBGM.setBounds(100,600,110,100);
         muteBGM.setFont(new Font("Serif", Font.PLAIN, 30));
-        muteBGM.addActionListener(pic);
+        muteBGM.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Sounds.sound.stopMusic();
+                muteBGM.setEnabled(false);
+            }
+        });
         muteBGM.setBackground(new Color(234,192,126));
         jp.add(muteBGM);
 
